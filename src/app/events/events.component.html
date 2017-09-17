@@ -1,0 +1,14 @@
+<div class="form-container" id="toolbar">
+  <header>
+    <img class="userAvatar" src="{{this.avatarImage}}" alt="User Avatar">
+    <h1>Events</h1>
+    <button (click)="Logout()" class="logout-btn">Logout</button>
+  </header>
+  <div class="content">
+    <div>   
+      <div id="events-container">
+          <div (click)="TakeItem(item)" class="event-list-item" *ngFor="let item of neededItems | async"><p>{{item.message}}<span (click)="DeleteItem(item)" class="delete-msg">X</span></p></div>
+      </div>
+    </div>
+  </div>
+</div>

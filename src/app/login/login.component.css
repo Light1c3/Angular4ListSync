@@ -1,0 +1,38 @@
+.form-container{
+    padding-top: 9vh
+}
+#lock {
+    width:40%;
+    margin: 1.5em auto 4em auto;
+    display:block;
+}
+
+#google {
+    border: 1px solid #db3236;
+    background: #db3236 no-repeat 25px;
+    color: white;
+    font-weight: bolder;
+    width: 75vw;
+}
+
+#facebook {
+    border: 1px solid #3b5998;
+    background: #3b5998 no-repeat 25px;
+    color: white;
+    font-weight: bolder;
+    width: 75vw;
+}
+
+#anon{
+    border: 1px solid #AAAAAA;    
+    background: #AAAAAA no-repeat 25px;
+    color: black;
+    font-weight: bolder;
+    width: 75vw;
+    
+}
+h1{
+    font-size: 2em;
+    font-family: sans-serif;
+    margin-bottom: 2em;
+}

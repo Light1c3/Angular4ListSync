@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    background-color:#EBEBEB;
+    text-align: center;
+    height: 100vh;    
+}
+
+*{
+    font-family: 'Raleway';
+}
+button {
+    display: block;
+    background:#008FEF;
+    color:white;
+    padding: 1.2em;
+    text-align:center;
+    font-size:1.2em;
+    margin-bottom: 15px;
+    cursor:pointer;
+    margin:0 auto; /* this will center  it */
+    margin-bottom: 15px;
+    height: 10vh;
+}
+
+p {
+    font-size: 16;
+}
+
+img {
+    display:block;
+}

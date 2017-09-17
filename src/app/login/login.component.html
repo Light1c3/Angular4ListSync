@@ -1,0 +1,10 @@
+<div class="form-container">
+  <h1>Welcome to ListSync</h1>
+  <img src="assets/images/food.svg" id="lock">
+
+    <span class="error" *ngIf="error">{{ error }}</span>
+
+    <button (click)="loginGoogle()" id="google">Login With Google</button>
+    <button (click)="loginFacebook()" id="facebook">Login With Facebook</button>
+    <button (click)="loginAnonymously()" id="anon">Login Anonymously</button>
+</div>
