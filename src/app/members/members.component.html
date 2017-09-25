@@ -8,7 +8,7 @@
           <h1>Hey {{ titleName }}!</h1>
         </div>
         <div>   
-          <input *ngIf="!this.user.isAnonymous" type="text" id="message" placeholder="What is it that you do?" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
+          <input *ngIf="!this.user.isAnonymous" type="text" id="message" placeholder="Add an Item?" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
           <h2>Still Needed</h2>
           <div id="details-container">
               <div (click)="TakeItem(item)" class="needed-list-item" *ngFor="let item of neededItems | async"><p>{{item.message}}<span (click)="DeleteItem(item)" class="delete-msg">X</span></p></div>

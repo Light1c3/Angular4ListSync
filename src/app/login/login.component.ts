@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(public afAuth: AngularFireAuth, private router: Router) {
     this.user = this.afAuth.authState;
     if(this.user){
-      this.router.navigateByUrl('/members');
+      this.router.navigateByUrl('/events');
     }  
   }
 

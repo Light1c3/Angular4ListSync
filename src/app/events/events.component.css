@@ -26,15 +26,11 @@ h1{
 .content{
     padding: 0em 1em;
 }
-input#message {
-    display: block;
-    background:#fff;
-    border:none;
-    outline:none;
-    font-size:1.6em;
-    font-weight:300;
-    margin-bottom: 2em;
-    margin-right:1em;
+
+.event-list-item{
+    width: 90vw;
+    background: lightblue;
+    margin: 1em;
 }
 
 #events-container {
@@ -46,37 +42,6 @@ input#message {
     width:100%;
 }
 
-.needed-list-item{
-    background:#fff;
-    padding:1.4em;
-    color:#696969;
-    margin: auto;
-    margin-bottom: 1em;
-    min-width:300px;
-}
-.needed-list-item p {
-    padding: 0;
-    margin-bottom: 0;
-    font-size: x-large;
-}
-.assigned-list-item{
-    margin: auto;
-    width:auto;
-    margin-bottom: 1em;
-    background:#fff;
-    padding:1.4em; 
-    min-width:300px;    
-}
-.assigned-list-item p {
-    padding: 0;
-    margin-bottom: 0;
-    margin-top: .5em;
-    font-size: x-large;
-}
-.assigned-list-item img{
-    width: 25%;
-    border-radius: 50%;
-}
 #events-container span{
     position: relative;
     float: right;
@@ -102,7 +67,33 @@ img {
     margin: auto;
 }
 
-.clear-btn{
+.event-btn{
     background: red;
+    width: 15vw;
+    height: 15vw;
+    position: fixed;
     bottom: 0;
+    right: 0;
+    margin: 1em;
+    border-radius: 6vh;
+}
+
+.event-btn:focus{
+    border: none;
+    text-decoration: none;
+    outline: none;
+    user-select: none;
+}
+
+.event-btn:hover{
+    cursor: pointer;
+    box-shadow: 2px 8px 5px -1px rgba(0,0,0,0.6);
+}
+
+.event-name-inpt{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 75vw;
+    margin: 1em;
 }

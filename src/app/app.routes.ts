@@ -11,7 +11,7 @@ export const router: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'events', component: EventsComponent, canActivate: [AuthGuard] },
-    { path: 'members', component: MembersComponent, canActivate: [AuthGuard] }
+    { path: 'members', component: MembersComponent, canActivate: [AuthGuard], data  : {event_key: {} } }
 
 ]
 

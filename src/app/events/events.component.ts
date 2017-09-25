@@ -16,18 +16,48 @@ export class EventsComponent implements OnInit {
   user: any;
   titleName: string = "Guest";
   avatarImage: string = "http://via.placeholder.com/100x100";
-  neededItems: FirebaseListObservable<any[]>;
+  eventName: string;
+  events: FirebaseListObservable<any[]>;
+  firebase: any;
   
   constructor(public afAuth: AngularFireAuth, private router: Router, public af: AngularFireDatabase) {
     
-        this.afAuth.authState.subscribe(auth => {
-          if(auth) {
-            this.user = auth;
-          }
-        });
+    this.afAuth.authState.subscribe(auth => {
+      if(auth) {
+        this.user = auth;
+        this.firebase = af;
       }
+    });
+  }
+
+  AddEvent(){
+    if(!this.user.isAnonymous) {
+      this.events.push({ eventName: this.eventName});
+    }
+    this.eventName = "";
+  }
+
+  EventDetails(event){
+    this.router.navigate(['/members'], { queryParams: {event_key: "Other Data"} });
+  }
+
+  Logout() {
+    this.afAuth.auth.signOut();
+    this.router.navigateByUrl('/login');
+  }
 
   ngOnInit() {
+    if(!this.user.isAnonymous) {
+      this.titleName = this.user.displayName;
+      this.avatarImage = this.user.photoURL;
+
+      this.events = this.firebase.list('/' + this.user.uid, {
+        query: {
+          limitToLast: 50
+        }
+      });
+    }
+    
   }
 
 }
